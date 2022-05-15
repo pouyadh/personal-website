@@ -1,0 +1,93 @@
+footer {
+  text-align: center;
+  background-color: var(--color-black);
+  font-family: var(--font-primary);
+  & > * {
+    display: block;
+  }
+  button {
+    width: 100%;
+    background-color: #020202;
+    font-size: 1rem;
+    border-radius: 0;
+  }
+  .logo {
+    margin: 3rem auto 1rem auto;
+    cursor: pointer;
+  }
+  .motto {
+    font-size: 1.3rem;
+    margin: 1rem auto 2rem auto;
+  }
+  ul {
+    display: flex;
+    margin: 1rem auto;
+    justify-content: center;
+    //gap: 1rem;
+    li {
+      margin: 0 0.5rem;
+    }
+
+    a {
+      color: var(--color-white);
+      text-decoration: none;
+    }
+
+    &.nav-links {
+      a {
+        color: var(--color-secondary);
+        font-weight: bold;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    &.social-media {
+      margin: 2rem auto;
+      font-size: 1.5rem;
+      li::before {
+        display: none;
+      }
+      a {
+        //border: 1px solid var(--color-primary);
+        display: block;
+        padding: 0.5em;
+        line-height: 0;
+        border-radius: 50%;
+        //box-shadow: 0px 2px 4px var(--color-primary);
+        &:hover {
+          box-shadow: 0px 2px 10px var(--color-primary);
+          background-color: var(--color-primary-dark);
+        }
+      }
+      li {
+        line-height: 1em;
+      }
+      svg {
+        width: 1em;
+        height: 1em;
+      }
+    }
+  }
+
+  .subfooter {
+    li {
+      margin: 0;
+    }
+    margin: 0;
+    background-color: var(--color-footer-bg);
+    color: var(--color-grey);
+    font-size: 0.8rem;
+    flex-wrap: wrap;
+    //font-weight: bold;
+    padding: 0.5em 2rem;
+    li:first-child::before {
+      display: none;
+    }
+    li::before {
+      display: inline-block;
+      color: var(--color-grey);
+    }
+  }
+}
