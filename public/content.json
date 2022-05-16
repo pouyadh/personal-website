@@ -108,9 +108,15 @@
       { "title": "Formik/Yup", "level": "Mid" },
       { "title": "Figma", "level": "Mid" },
       { "title": "Responsive Web Design", "level": "Mid" },
+      { "title": "Restful API", "level": "Mid" },
       { "title": "Material UI", "level": "Junior" },
+      { "title": "Git/GitHub", "level": "Junior" },
       { "title": "NodeJs/Express", "level": "Junior" },
-      { "title": "Git/GitHub", "level": "Junior" }
+      { "title": "Session and JWT Authentication", "level": "Junior" },
+      { "title": "MongoDB-mySQL-OracleDB", "level": "Junior", "hidden": true },
+      { "title": "SQL-PL/SQL-noSQL", "level": "Junior", "hidden": true },
+      { "title": "Basic Language", "level": "Senior", "hidden": true },
+      { "title": "C++ Language", "level": "Mid", "hidden": true }
     ],
     "about": {
       "text": "Hi,<br>I'm Pouya Dehghani.<br>I have been programming since 2011 and have been working as Front-End Developer for almost a year.<br>I have good knowledge of HTML5, CSS3, SASS, Javascript ES6, React, Responsive Web Design and Git/GitHub.<br>And also basic knowledge of UI Designing, Software engineering, Nodejs/Express, MongoDB, mySQL, OracleDB, PL/SQL, Basic and C++.<br>"
