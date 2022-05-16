@@ -6,7 +6,7 @@ import { useQuery } from "react-query";
 import LoadingAnimation from "./components/LoadingAnimation/LoadingAnimation";
 import SomethingWentWrong from "./components/SomethingWentWrong/SomethingWentWrong";
 
-const fetchContent = () => fetch("/content.json").then((res) => res.json());
+const fetchContent = () => fetch("./content.json").then((res) => res.json());
 
 function App() {
   const { isLoading, error, data } = useQuery("content", fetchContent);
