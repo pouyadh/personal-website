@@ -46,11 +46,14 @@ const Main = ({ data }) => {
         <hr />
         <div className="section-content">
           <ul>
-            {data.skills.map((item, idx) => (
-              <li key={`skill-${idx}`}>
-                {item.title} <span>({item.level})</span>
-              </li>
-            ))}
+            {data.skills.map(
+              (item, idx) =>
+                !item.hidden && (
+                  <li key={`skill-${idx}`}>
+                    {item.title} <span>({item.level})</span>
+                  </li>
+                )
+            )}
           </ul>
         </div>
       </section>
