@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/personal-website/static/css/main.5af385ef.css",
-    "main.js": "/personal-website/static/js/main.cb3e0506.js",
+    "main.js": "/personal-website/static/js/main.c3c811d4.js",
     "static/media/hero-laptop.svg": "/personal-website/static/media/hero-laptop.aecda366e2f7a437dbaca7862bd29d70.svg",
     "static/media/logo.svg": "/personal-website/static/media/logo.dc88c71b44086a2cffff9bc74e9b8e8a.svg",
     "static/media/hero-bg.svg": "/personal-website/static/media/hero-bg.c8e53f68e7ca38dd9341b7bee8820580.svg",
@@ -9,10 +9,10 @@
     "static/media/nav-hamberger.svg": "/personal-website/static/media/nav-hamberger.2f59b75de46199f0a9db0ffaec5b9a80.svg",
     "static/media/hero-scroll.svg": "/personal-website/static/media/hero-scroll.ed02b963cdf0695ec66d461e0d26d288.svg",
     "main.5af385ef.css.map": "/personal-website/static/css/main.5af385ef.css.map",
-    "main.cb3e0506.js.map": "/personal-website/static/js/main.cb3e0506.js.map"
+    "main.c3c811d4.js.map": "/personal-website/static/js/main.c3c811d4.js.map"
   },
   "entrypoints": [
     "static/css/main.5af385ef.css",
-    "static/js/main.cb3e0506.js"
+    "static/js/main.c3c811d4.js"
   ]
 }
