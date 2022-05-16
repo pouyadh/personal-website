@@ -46,7 +46,7 @@
             "target": "_blank"
           }
         ],
-        "image": "/img/online-store.png",
+        "image": "./img/online-store.png",
         "description": "A fully functional responsive ECommerce web application using <code>React.js</code> and <code>Redux Toolkit</code> with the help of <code>React Query</code> and <code>React Router DOM v6</code> styled with <code>Sass</code>\nFeel free to check the repo, I commited all chenges step by step on branch ‘Develop’.",
         "bullets": [
           {
@@ -80,7 +80,7 @@
             "target": "_blank"
           }
         ],
-        "image": "/img/personal-website.png",
+        "image": "./img/personal-website.png",
         "description": "A simple responsive website created using <code>React</code> with the help of <code>React Query</code> styled with <code>Sass</code> whitch pulls content from local json file and renders it",
         "bullets": [
           {
