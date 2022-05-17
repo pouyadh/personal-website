@@ -1,6 +1,7 @@
 import { ReactComponent as Logo } from "../../assets/logo.svg";
 import { FaLinkedinIn, FaEnvelope, FaGithubAlt } from "react-icons/fa";
 import "./Footer.scss";
+import { FormattedMessage } from "react-intl";
 
 const icons = {
   linkedin: <FaLinkedinIn />,
@@ -20,7 +21,9 @@ const Footer = ({ data }) => {
   };
   return (
     <footer>
-      <button onClick={handleBackToTop}>Back to top</button>
+      <button onClick={handleBackToTop}>
+        <FormattedMessage id="app.nav.back-to-top" />
+      </button>
       <Logo
         className="logo"
         onClick={() => window.location.replace(window.location.pathname)}
@@ -28,10 +31,10 @@ const Footer = ({ data }) => {
       <p className="motto">{data.motto}</p>
 
       <ul className="nav-links">
-        {data.navLinks.map((item) => (
-          <li key={`navLink-${item.caption}`}>
-            <a href={item.href} onClick={handleLinkClick}>
-              {item.caption}
+        {["projects", "skills", "about", "contact"].map((item) => (
+          <li key={`navLink-${item}`}>
+            <a href={`#${item}`} onClick={handleLinkClick}>
+              <FormattedMessage id={`app.nav.${item}`} />
             </a>
           </li>
         ))}

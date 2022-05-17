@@ -1,11 +1,15 @@
 import React from "react";
+import { FormattedMessage } from "react-intl";
 import ContactForm from "./ContactForm";
 import "./Main.scss";
+
 const Main = ({ data }) => {
   return (
     <main>
       <section id="projects" className="projects">
-        <h3>Projects</h3>
+        <h3>
+          <FormattedMessage id="app.section.title.projects" />
+        </h3>
         <hr />
         <div className="section-content">
           {data.projects.map((project) => (
@@ -42,7 +46,9 @@ const Main = ({ data }) => {
       </section>
 
       <section id="skills" className="skills">
-        <h3>Skills</h3>
+        <h3>
+          <FormattedMessage id="app.section.title.skills" />
+        </h3>
         <hr />
         <div className="section-content">
           <ul>
@@ -59,7 +65,9 @@ const Main = ({ data }) => {
       </section>
 
       <section id="about" className="about">
-        <h3>About me</h3>
+        <h3>
+          <FormattedMessage id="app.section.title.about" />
+        </h3>
         <hr />
         <div className="section-content">
           <p dangerouslySetInnerHTML={{ __html: data.about.text }} />
@@ -67,7 +75,9 @@ const Main = ({ data }) => {
       </section>
 
       <section id="contact" className="contact">
-        <h3>Let's talk</h3>
+        <h3>
+          <FormattedMessage id="app.section.title.contact" />
+        </h3>
         <hr />
         <div className="section-content">
           <p dangerouslySetInnerHTML={{ __html: data.contact.text }} />

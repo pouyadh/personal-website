@@ -7,17 +7,20 @@ import * as Yup from "yup";
 // Using formik and yup just for showcase, however it's not efficient and they are technical debts due to their huge bundle sizes for such a simple form!
 
 import emailjs from "@emailjs/browser";
+import { FormattedMessage } from "react-intl";
 
 const contactFormSchema = Yup.object().shape({
   name: Yup.string()
-    .min(2, "Too Short")
-    .max(50, "Too Long")
-    .required("Required"),
-  email: Yup.string().email("Invalid email").required("Required"),
+    .min(2, "form.validation.too_short")
+    .max(50, "form.validation.too_long")
+    .required("form.validation.required"),
+  email: Yup.string()
+    .email("form.validation.invalid_email")
+    .required("form.validation.required"),
   message: Yup.string()
-    .min(5, "Too Short")
-    .max(500, "Too Long")
-    .required("Required"),
+    .min(5, "form.validation.too_short")
+    .max(500, "form.validation.too_long")
+    .required("form.validation.required"),
 });
 
 const contactFormInitialValues = {
@@ -30,7 +33,7 @@ const CustomErrorMessage = ({ name }) => (
   <ErrorMessage name={name}>
     {(msg) => (
       <span className="error">
-        <FaTimes style={{ color: "#f00" }} /> {msg}
+        <FaTimes style={{ color: "#f00" }} /> <FormattedMessage id={msg} />
       </span>
     )}
   </ErrorMessage>
@@ -41,9 +44,21 @@ const handleSubmit = async (values) => {
   const tid = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
   const pk = process.env.REACT_APP_EMAILJS_PUBLIC_KEY;
   await toast.promise(emailjs.send(sid, tid, values, pk), {
-    pending: "Sending your message",
-    success: "Thank you, Your message has been sent",
-    error: "Sorry, Something went wrong",
+    pending: {
+      render() {
+        return <FormattedMessage id="contact-form.submit.pending" />;
+      },
+    },
+    success: {
+      render() {
+        return <FormattedMessage id="contact-form.submit.success" />;
+      },
+    },
+    error: {
+      render() {
+        return <FormattedMessage id="contact-form.submit.error" />;
+      },
+    },
   });
 };
 
@@ -56,13 +71,19 @@ const ContactForm = () => {
     >
       {({ isSubmitting }) => (
         <Form id="contact-form">
-          <label htmlFor="name-input">Your name</label>
+          <label htmlFor="name-input">
+            <FormattedMessage id="contact-form.label.name" />
+          </label>
           <Field id="name-input" type="text" name="name" />
           <CustomErrorMessage name="name" />
-          <label htmlFor="email-input">Your email</label>
+          <label htmlFor="email-input">
+            <FormattedMessage id="contact-form.label.email" />
+          </label>
           <Field id="email-input" type="email" name="email" />
           <CustomErrorMessage name="email" />
-          <label htmlFor="message-input">Your message</label>
+          <label htmlFor="message-input">
+            <FormattedMessage id="contact-form.label.message" />
+          </label>
           <Field
             as="textarea"
             id="message-input"
@@ -73,7 +94,11 @@ const ContactForm = () => {
 
           <button type="submit" disabled={isSubmitting}>
             {isSubmitting && <span className="spinner" />}
-            {isSubmitting ? "Sending..." : "Send"}
+            {isSubmitting ? (
+              <FormattedMessage id="contact-form.button.submitting" />
+            ) : (
+              <FormattedMessage id="contact-form.button.submit" />
+            )}
           </button>
         </Form>
       )}

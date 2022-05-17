@@ -33,6 +33,7 @@ header {
     left: 8%;
     top: 50%;
     width: 50%;
+
     h1 {
       font-size: 5.5em;
       margin-bottom: 0.5em;
@@ -111,5 +112,14 @@ header {
   100% {
     transform: translateY(15px);
     opacity: 0.5;
+  }
+}
+
+html[dir="rtl"] {
+  header {
+    transform: scaleX(-1);
+    .heading {
+      transform: scaleX(-1) translateY(-50%);
+    }
   }
 }
