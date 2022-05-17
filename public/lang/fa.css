@@ -14,6 +14,11 @@
 }
 
 @font-face {
+    font-family: 'Negar';
+    src: url(../fonts/negar/ANegaar.ttf);
+}
+
+@font-face {
     font-family: 'Ubuntu Mono';
     src: url(../fonts/Ubuntu_Mono/UbuntuMono-Regular.ttf);
 }
@@ -25,7 +30,7 @@
 
 :root {
     --font-primary : "IRANYekan" , sans-serif;
-    --font-secondary : "Cinema" , sans-serif;
+    --font-secondary : "Negar" , sans-serif;
     --font-mono : "Ubuntu Mono" , monospace;
     --toastify-font-family: "IRANYekan" , sans-serif;
 }

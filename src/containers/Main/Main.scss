@@ -28,7 +28,7 @@ main {
     color: var(--color-grey);
   }
   ul {
-    font-size: 1.7rem;
+    font-size: 1.5rem;
   }
 
   label {
@@ -53,9 +53,12 @@ main {
 
   ul {
     list-style: none;
-    margin-left: 2rem;
+    margin-left: 0rem;
     margin-top: 0.5rem;
+
     li {
+      text-overflow: ellipsis;
+      overflow: hidden;
       white-space: nowrap;
     }
     li > span {

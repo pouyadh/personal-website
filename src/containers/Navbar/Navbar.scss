@@ -31,6 +31,7 @@ nav {
     align-items: center;
     list-style: none;
     transition: all 1s ease;
+    flex-wrap: wrap;
     li {
       //background-color: blue;
       a {
@@ -40,6 +41,7 @@ nav {
         color: white;
         font-size: 0.8em;
         font-weight: bold;
+        white-space: nowrap;
         &:hover {
           color: var(--color-secondary);
         }
@@ -55,7 +57,7 @@ nav {
     }
     ul {
       display: flex;
-      height: 5em;
+      height: 8em;
       opacity: 1;
       margin: 0;
     }
