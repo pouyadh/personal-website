@@ -1,0 +1,128 @@
+{
+  "general": {
+    "last-update": "13 May 2022",
+    "headingText": "Creative Front\u2011End Developer",
+    "scrollCTA": "See my work",
+    "motto": "Just a bit better than yesterday",
+    "navLinks": [
+      { "caption": "Projects", "href": "#projects" },
+      { "caption": "Skills", "href": "#skills" },
+      { "caption": "About", "href": "#about" },
+      { "caption": "Contact", "href": "#contact" }
+    ],
+    "outLinks": [
+      {
+        "iconName": "linkedin",
+        "href": "https://linkedin.com/in/pouyadh",
+        "target": "_blank"
+      },
+      {
+        "iconName": "email",
+        "href": "mailto:pouyadh.dev@gmail.com",
+        "target": ""
+      },
+      {
+        "iconName": "github",
+        "href": "https://github.com/pouyadh",
+        "target": "_blank"
+      }
+    ],
+    "subFooter": ["Copyright © 2022 Pouya Dehghani", "Front-End Developer"]
+  },
+  "body": {
+    "projects": [
+      {
+        "date": "2022",
+        "title": "Online Store",
+        "links": [
+          {
+            "caption": "Live",
+            "href": "https://shopping-cart.pouyadh.ir",
+            "target": "_blank"
+          },
+          {
+            "caption": "Repo",
+            "href": "https://github.com/pouyadh/shopping-cart",
+            "target": "_blank"
+          }
+        ],
+        "image": "./img/online-store.png",
+        "description": "A fully functional responsive ECommerce web application using <code>React.js</code> and <code>Redux Toolkit</code> with the help of <code>React Query</code> and <code>React Router DOM v6</code> styled with <code>Sass</code>\nFeel free to check the repo, I commited all chenges step by step on branch ‘Develop’.",
+        "bullets": [
+          {
+            "title": "Features",
+            "items": ["Shopping cart", "Search", "Filter", "Sort"]
+          },
+          {
+            "title": "Using",
+            "items": [
+              "React",
+              "Redux toolkit",
+              "React Query",
+              "React Router Dom v6",
+              "Sass"
+            ]
+          }
+        ]
+      },
+      {
+        "date": "2022",
+        "title": "Personal Website",
+        "links": [
+          {
+            "caption": "Live",
+            "href": "https://pouyadh.ir",
+            "target": "_blank"
+          },
+          {
+            "caption": "Repo",
+            "href": "https://github.com/pouyadh/personal-website",
+            "target": "_blank"
+          }
+        ],
+        "image": "./img/personal-website.png",
+        "description": "A simple responsive website created using <code>React</code> with the help of <code>React Query</code> styled with <code>Sass</code> whitch pulls content from local json file and renders it",
+        "bullets": [
+          {
+            "title": "Using",
+            "items": [
+              "React",
+              "React Query",
+              "React Toastify",
+              "Formik/Yup",
+              "Sass"
+            ]
+          }
+        ]
+      }
+    ],
+    "skills": [
+      { "title": "HTML", "level": "Mid" },
+      { "title": "CSS", "level": "Mid" },
+      { "title": "Sass", "level": "Mid" },
+      { "title": "Javascript", "level": "Mid" },
+      { "title": "React", "level": "Mid" },
+      { "title": "Redux", "level": "Mid" },
+      { "title": "Redux Toolkit", "level": "Mid" },
+      { "title": "React Query", "level": "Mid" },
+      { "title": "Formik/Yup", "level": "Mid" },
+      { "title": "Figma", "level": "Mid" },
+      { "title": "Responsive Web Design", "level": "Mid" },
+      { "title": "Restful API", "level": "Mid" },
+      { "title": "Material UI", "level": "Junior" },
+      { "title": "Git/GitHub", "level": "Junior" },
+      { "title": "NodeJs/Express", "level": "Junior" },
+      { "title": "Session and JWT Authentication", "level": "Junior" },
+      { "title": "MongoDB-mySQL-OracleDB", "level": "Junior", "hidden": true },
+      { "title": "SQL-PL/SQL-noSQL", "level": "Junior", "hidden": true },
+      { "title": "Basic Language", "level": "Senior", "hidden": true },
+      { "title": "C++ Language", "level": "Mid", "hidden": true }
+    ],
+    "about": {
+      "text": "Hi,<br>I'm Pouya Dehghani.<br>I have been programming since 2011 and have been working as Front-End Developer for almost a year.<br>I have good knowledge of HTML5, CSS3, SASS, Javascript ES6, React, Responsive Web Design and Git/GitHub.<br>And also basic knowledge of UI Designing, Software engineering, Nodejs/Express, MongoDB, mySQL, OracleDB, PL/SQL, Basic and C++.<br>"
+    },
+    "contact": {
+      "text": "Feel free to contact me<br>I'll reply to your message as soon as possible<br><br>Alternatively, you can also contact me via <a href=\"mailto:pouyadh.dev@gmail.com\">Email</a> or <a href=\"https://linkedin.com/in/pouyadh\" target=\"_blank\">Linkedin</a>"
+    }
+  }
+}

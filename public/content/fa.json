@@ -1,0 +1,136 @@
+{
+  "general": {
+    "last-update": "13 May 2022",
+    "headingText": "توسعه دهنده فرانت\u2011اند خلاق",
+    "scrollCTA": "نمونه کار ها",
+    "motto": "کمی بهتر از دیروز",
+    "outLinks": [
+      {
+        "iconName": "linkedin",
+        "href": "https://linkedin.com/in/pouyadh",
+        "target": "_blank"
+      },
+      {
+        "iconName": "email",
+        "href": "mailto:pouyadh.dev@gmail.com",
+        "target": ""
+      },
+      {
+        "iconName": "github",
+        "href": "https://github.com/pouyadh",
+        "target": "_blank"
+      }
+    ],
+    "subFooter": ["کپی رایت © ۲۰۲۲ پویا دهقانی", "توسعه دهنده فرانت-اند"]
+  },
+  "body": {
+    "projects": [
+      {
+        "date": "۲۰۲۲",
+        "title": "فروشگاه آنلاین",
+        "links": [
+          {
+            "caption": "لایو",
+            "href": "https://shopping-cart.pouyadh.ir",
+            "target": "_blank"
+          },
+          {
+            "caption": "ریپو",
+            "href": "https://github.com/pouyadh/shopping-cart",
+            "target": "_blank"
+          }
+        ],
+        "image": "./img/online-store.png",
+        "description": "یک وب اپلیکیشن ریسپانسیو فروشگاه آنلاین با استفاده از <code>React</code> و <code>Redux Toolkit</code> و استایل دهی شده توسط <code>Sass</code>.",
+        "bullets": [
+          {
+            "title": "قابلیت ها",
+            "items": ["سبد خرید", "جستوجو", "فیلتر", "مرتب سازی", "واکنش گرا"]
+          },
+          {
+            "title": "با استفاده از",
+            "items": [
+              "React",
+              "Redux toolkit",
+              "React Query",
+              "React Router Dom v6",
+              "Sass"
+            ]
+          }
+        ]
+      },
+      {
+        "date": "۲۰۲۲",
+        "title": "وبسایت شخصی",
+        "links": [
+          {
+            "caption": "لایو",
+            "href": "https://pouyadh.ir",
+            "target": "_blank"
+          },
+          {
+            "caption": "ریپو",
+            "href": "https://github.com/pouyadh/personal-website",
+            "target": "_blank"
+          }
+        ],
+        "image": "./img/personal-website.png",
+        "description": "یک وبسایت ساده ریسپانسیو که توسط <code>React</code> ساخته شده",
+        "bullets": [
+          {
+            "title": "قابلیت ها",
+            "items": [
+              "دو زبانه (محلی سازی شده)",
+              "ارسال ایمیل",
+              "واکنش گرا",
+              "اعتبار سنجی فرم"
+            ]
+          },
+          {
+            "title": "با استفاده از",
+            "items": [
+              "React(CRA)",
+              "React Intl(Format.js)",
+              "React Query",
+              "React Toastify",
+              "Formik/Yup",
+              "Sass"
+            ]
+          }
+        ]
+      }
+    ],
+    "skills": [
+      { "title": "HTML", "level": "متوسط" },
+      { "title": "CSS", "level": "متوسط" },
+      { "title": "Sass", "level": "متوسط" },
+      { "title": "Javascript", "level": "متوسط" },
+      { "title": "React", "level": "متوسط" },
+      { "title": "Redux", "level": "متوسط" },
+      { "title": "Redux Toolkit", "level": "متوسط" },
+      { "title": "React Query", "level": "متوسط" },
+      { "title": "Formik/Yup", "level": "متوسط" },
+      { "title": "Figma", "level": "متوسط" },
+      { "title": "Responsive Web Design", "level": "متوسط" },
+      { "title": "Restful API", "level": "متوسط" },
+      { "title": "Material UI", "level": "تازه کار" },
+      { "title": "Git/GitHub", "level": "تازه کار" },
+      { "title": "NodeJs/Express", "level": "تازه کار" },
+      { "title": "Session and JWT Authentication", "level": "تازه کار" },
+      {
+        "title": "MongoDB-mySQL-OracleDB",
+        "level": "تازه کار",
+        "hidden": true
+      },
+      { "title": "SQL-PL/SQL-noSQL", "level": "تازه کار", "hidden": true },
+      { "title": "Basic Language", "level": "تازه کار", "hidden": true },
+      { "title": "C++ Language", "level": "متوسط", "hidden": true }
+    ],
+    "about": {
+      "text": "سلام،<br>من پویا دهقانی هستم.<br>برنامه نویسی رو از سن ۱۲ سالگی شروع کردم و در حال حاضر تقریبا یک سالی میشه که در زمینه فرانت-اند فعالیت میکنم.<br>راجع به دانش <code>HTML5</code>،<code>CSS3</code>،<code>SASS</code>،<code>Javascript ES6</code>،<code>React</code>،<code>Responsive Web Design</code> و <code>Git/GitHub</code> تسلط نسبتا خوبی دارم<br>و به <code>UI Designing</code>, <code>Software engineering</code>, <code>Nodejs/Express</code>, <code>MongoDB</code>, <code>mySQL</code>, <code>OracleDB</code>, <code>PL/SQL</code>, <code>Basic</code> and <code>Cpp</code> آشنا هستم و تجربه کار باهاشون رو داشتم.<br>"
+    },
+    "contact": {
+      "text": "میتوانید از طریق این فرم به من پیام بدید<br>من در اسرع وقت به پیامتون پاسخ خواهم داد<br><br>همچنین میتوانید از طریق <a href=\"mailto:pouyadh.dev@gmail.com\">ایمیل</a> یا <a href=\"https://linkedin.com/in/pouyadh\" target=\"_blank\">لینکدین</a> با من تماس بگیرید"
+    }
+  }
+}
