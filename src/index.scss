@@ -110,9 +110,15 @@ span.spinner {
 }
 
 code {
-  background-color: #000;
+  background-color: var(--color-black);
   border-radius: 8px;
   font-size: 0.9em;
   padding: 0.1em 0.4em;
   unicode-bidi: isolate;
+}
+
+html[dir="rtl"] {
+  li::after {
+    content: "\200E"; // right to left mark
+  }
 }
