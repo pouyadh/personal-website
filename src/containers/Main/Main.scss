@@ -115,7 +115,10 @@ main {
       display: flex;
       flex-direction: column;
       .error {
-        font-size: 1rem;
+        font-size: 0.9em;
+        margin-bottom: 1rem;
+        margin-top: -0.6rem;
+        color: rgb(221, 107, 107);
       }
       label {
         margin-bottom: 0.2em;
