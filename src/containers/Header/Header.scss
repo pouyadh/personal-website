@@ -81,9 +81,9 @@ header {
       }
     }
     .heading {
-      font-size: 0.4rem;
+      font-size: 0.45rem;
       text-align: center;
-      width: 60%;
+      width: 65%;
       top: 77%;
       left: 30%;
       filter: drop-shadow(4px 4px 4px black);
@@ -94,9 +94,10 @@ header {
     }
     .laptop {
       transform: translate(-50%, -50%);
-      top: 45%;
-      left: 50%;
-      max-width: 55%;
+      top: 48%;
+      right: unset;
+      left: 45%;
+      max-width: 65%;
     }
   }
 }

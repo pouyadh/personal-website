@@ -9,14 +9,11 @@
 }
 
 @font-face {
-    font-family: 'Cinema';
-    src: url(../fonts/Cinema/Cinema.ttf);
+    font-family: 'Rezvan';
+    src: url(../fonts/Rezvan/Rezvan.ttf);
 }
 
-@font-face {
-    font-family: 'Negar';
-    src: url(../fonts/negar/ANegaar.ttf);
-}
+
 
 @font-face {
     font-family: 'Ubuntu Mono';
@@ -30,7 +27,7 @@
 
 :root {
     --font-primary : "IRANYekan" , sans-serif;
-    --font-secondary : "Negar" , sans-serif;
+    --font-secondary : "Rezvan" , sans-serif;
     --font-mono : "Ubuntu Mono" , monospace;
     --toastify-font-family: "IRANYekan" , sans-serif;
 }
