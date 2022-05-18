@@ -3,43 +3,150 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Pouya Dehghani Portfolio Frond-End React JS" />
+    <meta
+      name="description"
+      content="Pouya Dehghani Portfolio Frond-End React JS"
+    />
 
-    <meta name="author" content="Pouya Dehghani">
-    <meta name="description" content="Front-End Developer">
-    <link rel="canonical" href="https://pouyadh.ir">
-    
-    <meta property="og:title" content="Pouya Dehghani">
-    <meta property="og:description" content="Front-End Developer. I code simple beautiful reliable things, and I love what I do.">
-    <meta property="og:locale" content="en_US">
-    <meta property="og:url" content="http://pouyadh.ir">
-    <meta property="og:site_name" content="Pouya Dehghani">
-    <meta property="og:image" content="http://pouyadh.ir/og.png">
+    <meta name="author" content="Pouya Dehghani" />
+    <meta name="description" content="Front-End Developer" />
+    <link rel="canonical" href="https://pouyadh.ir" />
+
+    <meta property="og:title" content="Pouya Dehghani" />
+    <meta
+      property="og:description"
+      content="Front-End Developer. I code simple beautiful reliable things, and I love what I do."
+    />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:url" content="http://pouyadh.ir" />
+    <meta property="og:site_name" content="Pouya Dehghani" />
+    <meta property="og:image" content="http://pouyadh.ir/og.png" />
     <meta property="og:type" content="website" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
 
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:site" content="@pouyadhi">
-    <meta name="twitter:creator" content="@pouyadhi">
-    <meta name="twitter:title" content="Pouya Dehghani">
-    <meta name="twitter:description" content="Front-End Developer. I code simple beautiful reliable things, and I love what I do.">
-    <meta name="twitter:image" content="http://pouyadh.ir/og.png">
-    <meta name="twitter:image:alt" content="Pouya Dehghani">
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@pouyadhi" />
+    <meta name="twitter:creator" content="@pouyadhi" />
+    <meta name="twitter:title" content="Pouya Dehghani" />
+    <meta
+      name="twitter:description"
+      content="Front-End Developer. I code simple beautiful reliable things, and I love what I do."
+    />
+    <meta name="twitter:image" content="http://pouyadh.ir/og.png" />
+    <meta name="twitter:image:alt" content="Pouya Dehghani" />
 
-    <link rel="apple-touch-icon" sizes="180x180" href="%PUBLIC_URL%/apple-touch-icon.png?v=1">
-    <link rel="icon" type="image/png" sizes="32x32" href="%PUBLIC_URL%/favicon-32x32.png?v=1">
-    <link rel="icon" type="image/png" sizes="16x16" href="%PUBLIC_URL%/favicon-16x16.png?v=1">
-    <link rel="manifest" href="%PUBLIC_URL%/site.webmanifest?v=1">
-    <link rel="mask-icon" href="%PUBLIC_URL%/safari-pinned-tab.svg?v=1" color="#5bbad5">
-    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico?v=1">
-    <meta name="msapplication-TileColor" content="#ffc40d">
-    <meta name="theme-color" content="#3431b6">
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="%PUBLIC_URL%/apple-touch-icon.png?v=1"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="%PUBLIC_URL%/favicon-32x32.png?v=1"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="%PUBLIC_URL%/favicon-16x16.png?v=1"
+    />
+    <link rel="manifest" href="%PUBLIC_URL%/site.webmanifest?v=1" />
+    <link
+      rel="mask-icon"
+      href="%PUBLIC_URL%/safari-pinned-tab.svg?v=1"
+      color="#5bbad5"
+    />
+    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico?v=1" />
+    <meta name="msapplication-TileColor" content="#ffc40d" />
+    <meta name="theme-color" content="#3431b6" />
     <title>Pouya Dehghani | Front-End Developer</title>
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background-color: #03002c;
+      }
+      .lds-ellipsis-center {
+        position: fixed !important;
+        top: 50vh;
+        left: 50vw;
+        transform: translate(-50%, -50%);
+      }
+      .lds-ellipsis {
+        display: inline-block;
+        position: relative;
+        width: 80px;
+        height: 80px;
+      }
+      .lds-ellipsis div {
+        position: absolute;
+        top: 33px;
+        width: 13px;
+        height: 13px;
+        border-radius: 50%;
+        background: #fff;
+        animation-timing-function: cubic-bezier(0, 1, 1, 0);
+      }
+      .lds-ellipsis div:nth-child(1) {
+        left: 8px;
+        animation: lds-ellipsis1 0.6s infinite;
+      }
+      .lds-ellipsis div:nth-child(2) {
+        left: 8px;
+        animation: lds-ellipsis2 0.6s infinite;
+      }
+      .lds-ellipsis div:nth-child(3) {
+        left: 32px;
+        animation: lds-ellipsis2 0.6s infinite;
+      }
+      .lds-ellipsis div:nth-child(4) {
+        left: 56px;
+        animation: lds-ellipsis3 0.6s infinite;
+      }
+      @keyframes lds-ellipsis1 {
+        0% {
+          transform: scale(0);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+      @keyframes lds-ellipsis3 {
+        0% {
+          transform: scale(1);
+        }
+        100% {
+          transform: scale(0);
+        }
+      }
+      @keyframes lds-ellipsis2 {
+        0% {
+          transform: translate(0, 0);
+        }
+        100% {
+          transform: translate(24px, 0);
+        }
+      }
+    </style>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
 
+    <!-- App Root -->
+    <div id="root">
+      <!-- Initial loading before the bundle loads  -->
+      <div class="lds-ellipsis lds-ellipsis-center">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
   </body>
 </html>
