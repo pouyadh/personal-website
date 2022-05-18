@@ -117,6 +117,10 @@ code {
   unicode-bidi: isolate;
 }
 
+a {
+  color: var(--color-secondary);
+}
+
 html[dir="rtl"] {
   li::after {
     content: "\200E"; // right to left mark
