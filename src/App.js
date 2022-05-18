@@ -6,34 +6,15 @@ import { useQuery } from "react-query";
 import LoadingAnimation from "./components/LoadingAnimation/LoadingAnimation";
 import SomethingWentWrong from "./components/SomethingWentWrong/SomethingWentWrong";
 import { FormattedMessage, IntlProvider } from "react-intl";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import Helmet from "react-helmet";
 import { ToastContainer } from "react-toastify";
-
-const fetchContent = (locale) =>
-  fetch(`./content/${locale}.json`).then((res) => res.json());
-const fetchLanguage = (locale) =>
-  fetch(`./lang/${locale}.json`).then((res) => res.json());
-
-const getLocale = () => {
-  const params = new URLSearchParams(window.location.search);
-  let lang = params.get("lang");
-  if (lang) {
-    window.localStorage.setItem("lang", lang);
-    return lang;
-  }
-  lang = window.localStorage.getItem("lang");
-  return lang ? lang : "en";
-};
+import { getLocale, fetchContent, fetchLanguage } from "./utils/locale";
 
 function App() {
-  const [locale, setLocale] = useState(getLocale);
-  const lang = useQuery(["lang", locale], () => fetchLanguage(locale), {
-    enabled: !!locale,
-  });
-  const content = useQuery(["content", locale], () => fetchContent(locale), {
-    enabled: !!locale,
-  });
+  const locale = getLocale();
+  const lang = useQuery(["lang", locale], () => fetchLanguage(locale));
+  const content = useQuery(["content", locale], () => fetchContent(locale));
 
   useEffect(() => {
     if (lang.data) {
