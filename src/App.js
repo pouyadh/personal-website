@@ -20,6 +20,7 @@ function App() {
     if (lang.data) {
       document.querySelector("html").setAttribute("lang", lang.data["lang"]);
       document.querySelector("html").setAttribute("dir", lang.data["lang.dir"]);
+      document.title = lang.data["app.document.title"];
     }
   }, [lang.data]);
 
@@ -27,26 +28,40 @@ function App() {
     return <LoadingAnimation center />;
   }
 
-  if (content.error || lang.error) {
+  if (lang.isError) {
     return (
       <SomethingWentWrong
-        h1={<FormattedMessage id="app.error.404.h1" />}
-        h2={<FormattedMessage id="app.error.404.h2" />}
-        p1={<FormattedMessage id="app.error.404.p1" />}
-        p2={<FormattedMessage id="app.error.404.p2" />}
+        h1={"OOPS!"}
+        h2={"ERROR 404"}
+        p1={"Currently we don't support this language"}
+        p2={
+          <>
+            You can choose either <a href="/?lang=en">English</a> or{" "}
+            <a href="/?lang=fa">Farsi</a>
+          </>
+        }
       />
+    );
+  }
+
+  if (content.isError) {
+    return (
+      <IntlProvider messages={lang.data} locale={locale}>
+        <Helmet>
+          <link rel="stylesheet" type="text/css" href={`lang/${locale}.css`} />
+        </Helmet>
+        <SomethingWentWrong
+          h1={<FormattedMessage id="app.error.404.h1" />}
+          h2={<FormattedMessage id="app.error.404.h2" />}
+          p1={<FormattedMessage id="app.error.404.p1" />}
+          p2={<FormattedMessage id="app.error.404.p2" />}
+        />
+      </IntlProvider>
     );
   }
 
   return (
     <IntlProvider messages={lang.data} locale={locale}>
-      <FormattedMessage id="app.document.title">
-        {(title) => (
-          <Helmet>
-            <title>{title}</title>
-          </Helmet>
-        )}
-      </FormattedMessage>
       <Helmet>
         <link rel="stylesheet" type="text/css" href={`lang/${locale}.css`} />
       </Helmet>
