@@ -81,15 +81,27 @@
           }
         ],
         "image": "./img/personal-website.png",
-        "description": "A simple responsive website created using <code>React</code> with the help of <code>React Query</code> styled with <code>Sass</code> whitch pulls content from local json file and renders it",
+        "description": "A simple, responsive, dynamic-content, fully-localized and animated website which pulls the content from local <code>json</code> files and renders them.<br>Created using <code>React</code> with the help of <code>React Query</code> as the query manager and styled with <code>Sass</code>.",
         "bullets": [
+          {
+            "title": "Features",
+            "items": [
+              "Localization",
+              "Animation",
+              "Form Validation",
+              "Message Submission"
+            ]
+          },
           {
             "title": "Using",
             "items": [
               "React",
+              "React Intl(Format.js)",
+              "Framer Motion",
               "React Query",
               "React Toastify",
               "Formik/Yup",
+              "Email.js",
               "Sass"
             ]
           }
