@@ -119,7 +119,7 @@
       { "title": "C++ Language", "level": "Mid", "hidden": true }
     ],
     "about": {
-      "text": "Hi,<br>I'm Pouya Dehghani.<br>I have been programming since 2011 and have been working as Front-End Developer for almost a year.<br>I have good knowledge of HTML5, CSS3, SASS, Javascript ES6, React, Responsive Web Design and Git/GitHub.<br>And also basic knowledge of UI Designing, Software engineering, Nodejs/Express, MongoDB, mySQL, OracleDB, PL/SQL, Basic and C++.<br>"
+      "text": "Hi,<br>I'm Pouya Dehghani.<br>I have been programming since 2011 and have been working as Front-End Developer for almost a year.<br>I have good knowledge of <code>HTML5</code>, <code>CSS3</code>, <code>SASS</code>, <code>Javascript ES6</code>, <code>React</code>, <code>Responsive Web Design</code> and <code>Git/GitHub</code>.<br>And also basic knowledge of <code>UI Designing</code>, <code>Software engineering</code>, <code>Nodejs/Express</code>, <code>MongoDB</code>, <code>mySQL</code>, <code>OracleDB</code>, <code>PL/SQL</code>, <code>Basic</code> and <code>C++</code>.<br>"
     },
     "contact": {
       "text": "Feel free to contact me<br>I'll reply to your message as soon as possible<br><br>Alternatively, you can also contact me via <a href=\"mailto:pouyadh.dev@gmail.com\">Email</a> or <a href=\"https://linkedin.com/in/pouyadh\" target=\"_blank\">Linkedin</a>"
