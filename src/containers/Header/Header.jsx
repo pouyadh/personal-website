@@ -3,21 +3,45 @@ import "./Header.scss";
 import imgLaptop from "../../assets/hero-laptop.svg";
 import { ReactComponent as HeroBgSVG } from "../../assets/hero-bg.svg";
 import { ReactComponent as HeroScrollSVG } from "../../assets/hero-scroll.svg";
+import { motion } from "framer-motion";
+import { getDocumentDirection } from "../../utils/document";
 
 const Header = ({ data }) => {
+  const dir = getDocumentDirection();
   return (
-    <header>
+    <motion.header
+      initial={{ opacity: 0, left: dir === "ltr" ? "10%" : "-10%" }}
+      animate={{ opacity: 1, left: "0%" }}
+      transition={{ duration: 0.5 }}
+    >
       <HeroBgSVG className="bg" preserveAspectRatio="none" />
-      <img className="laptop" src={imgLaptop} alt="laptop" />
+      <motion.img
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.8, duration: 0.5 }}
+        className="laptop"
+        src={imgLaptop}
+        alt="laptop"
+      />
 
       <div className="heading">
-        <h1>{data.headingText}</h1>
-        <div>
+        <motion.h1
+          initial={{ opacity: 0, y: "30%" }}
+          animate={{ opacity: 1, y: "0%" }}
+          transition={{ delay: 0.5, duration: 0.5 }}
+        >
+          {data.headingText}
+        </motion.h1>
+        <motion.div
+          initial={{ opacity: 0, x: "-10%" }}
+          animate={{ opacity: 1, x: "0%" }}
+          transition={{ delay: 0.8, duration: 0.5 }}
+        >
           <HeroScrollSVG />
           <h3>{data.scrollCTA}</h3>
-        </div>
+        </motion.div>
       </div>
-    </header>
+    </motion.header>
   );
 };
 
