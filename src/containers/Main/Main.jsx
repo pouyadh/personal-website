@@ -2,6 +2,42 @@ import React from "react";
 import { FormattedMessage } from "react-intl";
 import ContactForm from "./ContactForm";
 import "./Main.scss";
+import { motion } from "framer-motion";
+
+const ulv = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2,
+    },
+  },
+};
+
+const liv = {
+  hidden: { opacity: 0, x: "-100px" },
+  show: { opacity: 1, x: "0px" },
+};
+
+const moVar = {
+  ul: {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+      },
+    },
+  },
+  li: {
+    hidden: { opacity: 0, x: "-100px" },
+    show: { opacity: 1, x: "0px" },
+  },
+  content: {
+    hidden: { opacity: 0, x: "10%" },
+    show: { opacity: 1, x: "0%", transition: { duration: 1.5 } },
+  },
+};
 
 const Main = ({ data }) => {
   return (
@@ -13,7 +49,12 @@ const Main = ({ data }) => {
         <hr />
         <div className="section-content">
           {data.projects.map((project) => (
-            <React.Fragment key={`project-${project.title.trim()}`}>
+            <motion.div
+              key={`project-${project.title.trim()}`}
+              initial="hidden"
+              whileInView="show"
+              variants={moVar.content}
+            >
               <h6>-{project.date}</h6>
               <h4>
                 {project.title}
@@ -32,15 +73,22 @@ const Main = ({ data }) => {
                 {project.bullets.map((blt) => (
                   <div key={`project__bullet-${blt.title}`}>
                     <h5>{blt.title}</h5>
-                    <ul>
+                    <motion.ul
+                      variants={ulv}
+                      initial="hidden"
+                      whileInView="show"
+                      viewport={{ once: true }}
+                    >
                       {blt.items.map((item, idx) => (
-                        <li key={`feaure-${idx}`}>{item}</li>
+                        <motion.li key={`feaure-${idx}`} variants={liv}>
+                          {item}
+                        </motion.li>
                       ))}
-                    </ul>
+                    </motion.ul>
                   </div>
                 ))}
               </div>
-            </React.Fragment>
+            </motion.div>
           ))}
         </div>
       </section>
@@ -50,18 +98,28 @@ const Main = ({ data }) => {
           <FormattedMessage id="app.section.title.skills" />
         </h3>
         <hr />
-        <div className="section-content">
-          <ul>
+        <motion.div
+          className="section-content"
+          initial="hidden"
+          whileInView="show"
+          variants={moVar.content}
+        >
+          <motion.ul
+            variants={ulv}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}
+          >
             {data.skills.map(
               (item, idx) =>
                 !item.hidden && (
-                  <li key={`skill-${idx}`}>
+                  <motion.li key={`skill-${idx}`} variants={liv}>
                     {item.title} <span>({item.level})</span>
-                  </li>
+                  </motion.li>
                 )
             )}
-          </ul>
-        </div>
+          </motion.ul>
+        </motion.div>
       </section>
 
       <section id="about" className="about">
@@ -69,9 +127,14 @@ const Main = ({ data }) => {
           <FormattedMessage id="app.section.title.about" />
         </h3>
         <hr />
-        <div className="section-content">
+        <motion.div
+          className="section-content"
+          initial="hidden"
+          whileInView="show"
+          variants={moVar.content}
+        >
           <p dangerouslySetInnerHTML={{ __html: data.about.text }} />
-        </div>
+        </motion.div>
       </section>
 
       <section id="contact" className="contact">
@@ -79,10 +142,15 @@ const Main = ({ data }) => {
           <FormattedMessage id="app.section.title.contact" />
         </h3>
         <hr />
-        <div className="section-content">
+        <motion.div
+          initial="hidden"
+          whileInView="show"
+          variants={moVar.content}
+          className="section-content"
+        >
           <p dangerouslySetInnerHTML={{ __html: data.contact.text }} />
           <ContactForm />
-        </div>
+        </motion.div>
       </section>
     </main>
   );
