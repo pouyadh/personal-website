@@ -7,7 +7,7 @@ import * as Yup from "yup";
 // Using formik and yup just for showcase, however it's not efficient and they are technical debts due to their huge bundle sizes for such a simple form!
 
 import emailjs from "@emailjs/browser";
-import { FormattedMessage } from "react-intl";
+import { FormattedMessage, useIntl } from "react-intl";
 import { motion } from "framer-motion";
 
 const contactFormSchema = Yup.object().shape({
@@ -68,6 +68,7 @@ const handleSubmit = async (values) => {
 };
 
 const ContactForm = () => {
+  const intl = useIntl();
   return (
     <Formik
       initialValues={contactFormInitialValues}
@@ -79,12 +80,26 @@ const ContactForm = () => {
           <label htmlFor="name-input">
             <FormattedMessage id="contact-form.label.name" />
           </label>
-          <Field id="name-input" type="text" name="name" />
+          <Field
+            id="name-input"
+            type="text"
+            name="name"
+            placeholder={intl.formatMessage({
+              id: "contact-form.placeholder.name",
+            })}
+          />
           <CustomErrorMessage name="name" />
           <label htmlFor="email-input">
             <FormattedMessage id="contact-form.label.email" />
           </label>
-          <Field id="email-input" type="email" name="email" />
+          <Field
+            id="email-input"
+            type="email"
+            name="email"
+            placeholder={intl.formatMessage({
+              id: "contact-form.placeholder.email",
+            })}
+          />
           <CustomErrorMessage name="email" />
           <label htmlFor="message-input">
             <FormattedMessage id="contact-form.label.message" />
@@ -94,6 +109,9 @@ const ContactForm = () => {
             id="message-input"
             form="contact-form"
             name="message"
+            placeholder={intl.formatMessage({
+              id: "contact-form.placeholder.message",
+            })}
           />
           <CustomErrorMessage name="message" />
 
