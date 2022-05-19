@@ -8,6 +8,7 @@ import * as Yup from "yup";
 
 import emailjs from "@emailjs/browser";
 import { FormattedMessage } from "react-intl";
+import { motion } from "framer-motion";
 
 const contactFormSchema = Yup.object().shape({
   name: Yup.string()
@@ -32,9 +33,13 @@ const contactFormInitialValues = {
 const CustomErrorMessage = ({ name }) => (
   <ErrorMessage name={name}>
     {(msg) => (
-      <span className="error">
+      <motion.span
+        className="error"
+        animate={{ x: [0, -10, 10, -10, 10, 0] }}
+        transition={{ duration: 0.3 }}
+      >
         <FaTimes style={{ color: "#f00" }} /> <FormattedMessage id={msg} />
-      </span>
+      </motion.span>
     )}
   </ErrorMessage>
 );
