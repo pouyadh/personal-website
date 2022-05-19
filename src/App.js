@@ -6,7 +6,6 @@ import { useQuery } from "react-query";
 import LoadingAnimation from "./components/LoadingAnimation/LoadingAnimation";
 import SomethingWentWrong from "./components/SomethingWentWrong/SomethingWentWrong";
 import { FormattedMessage, IntlProvider } from "react-intl";
-import { useEffect } from "react";
 import Helmet from "react-helmet";
 import { ToastContainer } from "react-toastify";
 import { getLocale, fetchContent, fetchLanguage } from "./utils/locale";
@@ -15,14 +14,6 @@ function App() {
   const locale = getLocale();
   const lang = useQuery(["lang", locale], () => fetchLanguage(locale));
   const content = useQuery(["content", locale], () => fetchContent(locale));
-
-  useEffect(() => {
-    if (lang.data) {
-      document.querySelector("html").setAttribute("lang", lang.data["lang"]);
-      document.querySelector("html").setAttribute("dir", lang.data["lang.dir"]);
-      document.title = lang.data["app.document.title"];
-    }
-  }, [lang.data]);
 
   if (content.isLoading || lang.isLoading) {
     return <LoadingAnimation center />;
@@ -59,6 +50,11 @@ function App() {
       </IntlProvider>
     );
   }
+
+  // Can not be used in the useEffect hook , because they may be updated after rendering the DOM tree and some of the components are depend on them. so they should update immidiately; and also they are not expensive.
+  document.querySelector("html").setAttribute("lang", lang.data["lang"]);
+  document.querySelector("html").setAttribute("dir", lang.data["lang.dir"]);
+  document.title = lang.data["app.document.title"];
 
   return (
     <IntlProvider messages={lang.data} locale={locale}>
