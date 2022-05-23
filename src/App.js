@@ -6,7 +6,6 @@ import { useQuery } from "react-query";
 import LoadingAnimation from "./components/LoadingAnimation/LoadingAnimation";
 import SomethingWentWrong from "./components/SomethingWentWrong/SomethingWentWrong";
 import { FormattedMessage, IntlProvider } from "react-intl";
-import Helmet from "react-helmet";
 import { ToastContainer } from "react-toastify";
 import { getLocale, fetchContent, fetchLanguage } from "./utils/locale";
 
@@ -38,9 +37,6 @@ function App() {
   if (content.isError) {
     return (
       <IntlProvider messages={lang.data} locale={locale}>
-        <Helmet>
-          <link rel="stylesheet" type="text/css" href={`lang/${locale}.css`} />
-        </Helmet>
         <SomethingWentWrong
           h1={<FormattedMessage id="app.error.404.h1" />}
           h2={<FormattedMessage id="app.error.404.h2" />}
@@ -58,9 +54,6 @@ function App() {
 
   return (
     <IntlProvider messages={lang.data} locale={locale}>
-      <Helmet>
-        <link rel="stylesheet" type="text/css" href={`lang/${locale}.css`} />
-      </Helmet>
       <Navbar locale={locale} />
       <Header data={content.data.general} />
       <Main data={content.data.body} />
