@@ -21,7 +21,7 @@
   "contact-form.label.email": "ایمیل",
   "contact-form.label.message": "پیام",
   "contact-form.placeholder.name": "مثال: علی",
-  "contact-form.placeholder.email": "مثال: ali@gmail.com",
+  "contact-form.placeholder.email": "مثال: example@gmail.com",
   "contact-form.placeholder.message": "متن پیام...",
   "contact-form.button.submitting": "درحال ارسال...",
   "contact-form.button.submit": "ارسال",
