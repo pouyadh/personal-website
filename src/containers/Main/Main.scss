@@ -1,95 +1,73 @@
 main {
   margin: 8%;
   font-family: var(--font-primary);
-  code {
-    color: var(--color-secondary);
-    font-family: var(--font-mono);
-  }
-  a {
-    color: var(--color-secondary);
-  }
-  p {
-    white-space: pre-wrap;
-    font-size: 1.8rem;
-    margin: 2rem 0;
-  }
-  h3 {
-    font-size: 2rem;
-  }
-  h4 {
-    font-size: 1.9rem;
-  }
-  h5 {
-    font-size: 2.1rem;
-    color: var(--color-grey);
-  }
-  h6 {
-    font-size: 1.2rem;
-    color: var(--color-grey);
-  }
-  ul {
-    font-size: 1.5rem;
-  }
-
-  label {
-    font-size: 1.5rem;
-  }
-  input,
-  textarea,
-  button {
-    font-size: 1.4rem;
-  }
-
-  hr {
-    border-color: var(--color-line);
-    margin: 1rem 0;
-  }
-
-  img {
-    display: block;
-    width: 70vw;
-    margin: 4rem auto;
-  }
-
-  ul {
-    list-style: none;
-    margin-left: 0rem;
-    margin-top: 0.5rem;
-
-    li {
-      text-overflow: ellipsis;
-      overflow: hidden;
-      white-space: nowrap;
-    }
-    li > span {
-      color: var(--color-grey);
-    }
-    li::before {
-      content: "\2022"; /* Add content: \2022 is the CSS Code/unicode for a bullet */
-      color: var(--color-secondary); /* Change the color */
-      font-weight: bold; /* If you want it to be bold */
-      display: inline-block; /* Needed to add space between the bullet and the text */
-      width: 1em; /* Also needed for space (tweak if needed) */
-      //margin-left: -1em; /* Also needed for space (tweak if needed) */
-    }
-  }
-
   section {
     margin: 4rem 0;
   }
 
+  hr {
+    margin: 1rem 0;
+  }
+
+  li {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    & > span {
+      color: var(--color-grey);
+    }
+  }
+
+  .project-wrapper {
+    display: flex;
+    justify-content: space-between;
+    & > div {
+      margin: 4rem 0;
+      flex-basis: 60%;
+      img {
+        //position: sticky;
+        //top: 80px;
+        width: 100%;
+        max-width: 20rem;
+      }
+    }
+    & > div:first-child {
+      flex-basis: 35%;
+      text-align: center;
+    }
+    @media screen and (max-width: 1024px) {
+      display: block;
+    }
+  }
+
+  .skills-list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+    max-height: 50vh;
+    @media screen and (max-width: 1024px) {
+      display: block;
+      max-height: unset;
+    }
+  }
+
   .section-content {
     padding: 2rem 1.5rem;
-    overflow-x: hidden;
+    @media screen and (max-width: 768px) {
+      padding: 2rem 0;
+    }
   }
 
   .bullet-container {
-    div {
-      margin: 1rem 3rem;
-    }
-
     display: flex;
     flex-wrap: wrap;
+
+    & > div {
+      margin-top: 2rem;
+      flex-grow: 1;
+      padding-right: 1rem;
+    }
   }
 
   .skills {
@@ -103,133 +81,31 @@ main {
 
   .contact > .section-content {
     display: flex;
-    //align-items: center;
+    justify-content: space-between;
+
     @media screen and (max-width: 1024px) {
       flex-direction: column;
     }
-    justify-content: space-between;
-    gap: 2rem;
+
     & > * {
-      flex: 1;
+      flex-basis: 48%;
+      margin-bottom: 2rem;
     }
     form {
       display: flex;
       flex-direction: column;
-      .error {
-        font-size: 0.9em;
-        margin-bottom: 1rem;
-        margin-top: -0.6rem;
-        color: rgb(221, 107, 107);
-      }
+
       label {
         margin-bottom: 0.2em;
       }
-      input,
-      textarea,
       button {
-        width: 100%;
-        padding: 0.6em 1em;
-        border-radius: 8px;
-        border: none;
-        outline: none;
-        background-color: var(--color-input-bg);
-        color: var(--color-white);
-        margin-bottom: 0.7em;
-        font-family: var(--font-primary);
-      }
-      button {
-        span {
-        }
         margin-top: 1.3em;
-        background-color: var(--color-primary);
-        cursor: pointer;
-        &:hover {
-          background-color: var(--color-primary-light);
-        }
-        &:active {
-          background-color: var(--color-primary-dark);
-        }
       }
-      textarea {
-        height: 8rem;
-        resize: vertical;
-        min-height: 5rem;
-        max-height: 20rem;
-        &::-webkit-scrollbar-corner {
-          background-color: transparent;
-        }
-      }
-    }
-  }
 
-  @media screen and (max-width: 510px) {
-    p {
-      font-size: 1.4rem;
-    }
-    h3 {
-      font-size: 1.6rem;
-    }
-    h4 {
-      font-size: 1.5rem;
-      a {
-        color: var(--color-secondary);
+      .error {
+        margin-bottom: 1.1em;
+        margin-top: -0.7em;
       }
-    }
-    h5 {
-      font-size: 1.7rem;
-      color: var(--color-grey);
-    }
-    h6 {
-      font-size: 0.8rem;
-      color: var(--color-grey);
-    }
-    ul {
-      font-size: 1.4rem;
-    }
-    label {
-      font-size: 1.1rem;
-    }
-    input,
-    textarea,
-    button {
-      font-size: 1rem;
-    }
-  }
-
-  @media screen and (max-width: 460px) {
-    margin: 5%;
-    ul {
-      margin-left: 0.5rem;
-    }
-    .section-content {
-      padding: 2rem 0.5rem;
-    }
-    .bullet-container > div {
-      margin: 1rem 0;
-    }
-
-    p {
-      font-size: 1.2rem;
-    }
-    h3 {
-      font-size: 1.4rem;
-    }
-    h4 {
-      font-size: 1.3rem;
-      a {
-        color: var(--color-secondary);
-      }
-    }
-    h5 {
-      font-size: 1.5rem;
-      color: var(--color-grey);
-    }
-    h6 {
-      font-size: 0.6rem;
-      color: var(--color-grey);
-    }
-    ul {
-      font-size: 1.2rem;
     }
   }
 }

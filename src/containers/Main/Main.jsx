@@ -4,22 +4,7 @@ import ContactForm from "./ContactForm";
 import "./Main.scss";
 import { motion } from "framer-motion";
 
-const ulv = {
-  hidden: { opacity: 0 },
-  show: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.2,
-    },
-  },
-};
-
-const liv = {
-  hidden: { opacity: 0, x: "-100px" },
-  show: { opacity: 1, x: "0px" },
-};
-
-const moVar = {
+const motionVariants = {
   ul: {
     hidden: { opacity: 0 },
     show: {
@@ -35,7 +20,7 @@ const moVar = {
   },
   content: {
     hidden: { opacity: 0, x: "10%" },
-    show: { opacity: 1, x: "0%", transition: { duration: 1.5 } },
+    show: { opacity: 1, x: "0%", transition: { duration: 1.3 } },
   },
 };
 
@@ -53,7 +38,7 @@ const Main = ({ data }) => {
               key={`project-${project.title.trim()}`}
               initial="hidden"
               whileInView="show"
-              variants={moVar.content}
+              variants={motionVariants.content}
             >
               <h6>-{project.date}</h6>
               <h4>
@@ -67,26 +52,37 @@ const Main = ({ data }) => {
                   </React.Fragment>
                 ))}
               </h4>
-              <img src={project.image} alt={project.title} />
-              <p dangerouslySetInnerHTML={{ __html: project.description }} />
-              <div className="bullet-container">
-                {project.bullets.map((blt) => (
-                  <div key={`project__bullet-${blt.title}`}>
-                    <h5>{blt.title}</h5>
-                    <motion.ul
-                      variants={ulv}
-                      initial="hidden"
-                      whileInView="show"
-                      viewport={{ once: true }}
-                    >
-                      {blt.items.map((item, idx) => (
-                        <motion.li key={`feaure-${idx}`} variants={liv}>
-                          {item}
-                        </motion.li>
-                      ))}
-                    </motion.ul>
+              <div className="project-wrapper">
+                <div>
+                  <img src={project.image} alt={project.title} />
+                </div>
+                <div>
+                  <p
+                    dangerouslySetInnerHTML={{ __html: project.description }}
+                  />
+                  <div className="bullet-container">
+                    {project.bullets.map((blt) => (
+                      <div key={`project__bullet-${blt.title}`}>
+                        <h5>{blt.title}</h5>
+                        <motion.ul
+                          variants={motionVariants.ul}
+                          initial="hidden"
+                          whileInView="show"
+                          viewport={{ once: true, amount: 1 }}
+                        >
+                          {blt.items.map((item, idx) => (
+                            <motion.li
+                              key={`feaure-${idx}`}
+                              variants={motionVariants.li}
+                            >
+                              {item}
+                            </motion.li>
+                          ))}
+                        </motion.ul>
+                      </div>
+                    ))}
                   </div>
-                ))}
+                </div>
               </div>
             </motion.div>
           ))}
@@ -102,18 +98,19 @@ const Main = ({ data }) => {
           className="section-content"
           initial="hidden"
           whileInView="show"
-          variants={moVar.content}
+          variants={motionVariants.content}
         >
           <motion.ul
-            variants={ulv}
+            className="skills-list"
+            variants={motionVariants.ul}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: true }}
+            viewport={{ once: true, amount: 0.5 }}
           >
             {data.skills.map(
               (item, idx) =>
                 !item.hidden && (
-                  <motion.li key={`skill-${idx}`} variants={liv}>
+                  <motion.li key={`skill-${idx}`} variants={motionVariants.li}>
                     {item.title} <span>({item.level})</span>
                   </motion.li>
                 )
@@ -131,7 +128,7 @@ const Main = ({ data }) => {
           className="section-content"
           initial="hidden"
           whileInView="show"
-          variants={moVar.content}
+          variants={motionVariants.content}
         >
           <p dangerouslySetInnerHTML={{ __html: data.about.text }} />
         </motion.div>
@@ -145,7 +142,7 @@ const Main = ({ data }) => {
         <motion.div
           initial="hidden"
           whileInView="show"
-          variants={moVar.content}
+          variants={motionVariants.content}
           className="section-content"
         >
           <p dangerouslySetInnerHTML={{ __html: data.contact.text }} />
