@@ -18,6 +18,18 @@ function App() {
     return <LoadingAnimation center />;
   }
 
+  if (lang.isError && content.error) {
+    return (
+      <SomethingWentWrong
+        dir="ltr"
+        h1={"OOPS!"}
+        h2={"We'll be back soon."}
+        p1={"The site is currently down for maintenance."}
+        p2={"Please try again later."}
+      />
+    );
+  }
+
   if (lang.isError) {
     return (
       <SomethingWentWrong
