@@ -77,7 +77,7 @@ const ContactForm = () => {
       onSubmit={handleSubmit}
     >
       {({ isSubmitting }) => (
-        <Form id="contact-form">
+        <Form id="contact-form" autoComplete="off">
           <label htmlFor="name-input">
             <FormattedMessage id="contact-form.label.name" />
           </label>
