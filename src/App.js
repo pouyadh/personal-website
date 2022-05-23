@@ -34,6 +34,11 @@ function App() {
     );
   }
 
+  // Can not be used in the useEffect hook , because they may be updated after rendering the DOM tree and some of the components are depend on them. so they should update immidiately; and also they are not expensive.
+  document.querySelector("html").setAttribute("lang", lang.data["lang"]);
+  document.querySelector("html").setAttribute("dir", lang.data["lang.dir"]);
+  document.title = lang.data["app.document.title"];
+
   if (content.isError) {
     return (
       <IntlProvider messages={lang.data} locale={locale}>
@@ -46,11 +51,6 @@ function App() {
       </IntlProvider>
     );
   }
-
-  // Can not be used in the useEffect hook , because they may be updated after rendering the DOM tree and some of the components are depend on them. so they should update immidiately; and also they are not expensive.
-  document.querySelector("html").setAttribute("lang", lang.data["lang"]);
-  document.querySelector("html").setAttribute("dir", lang.data["lang.dir"]);
-  document.title = lang.data["app.document.title"];
 
   return (
     <IntlProvider messages={lang.data} locale={locale}>
