@@ -1,0 +1,60 @@
+@font-face {
+    font-family: "Nunito";
+    src: url("./Nunito/Nunito-Regular.ttf");
+  }
+  
+  @font-face {
+    font-family: "Nunito";
+    src: url("./Nunito/Nunito-Bold.ttf");
+    font-weight: bold;
+  }
+  
+  @font-face {
+    font-family: "Ubuntu";
+    src: url("./Ubuntu/Ubuntu-Regular.ttf");
+  }
+  
+  @font-face {
+    font-family: "Ubuntu";
+    src: url("./Ubuntu/Ubuntu-Bold.ttf");
+    font-weight: bold;
+  }
+  
+  @font-face {
+    font-family: "IRANYekan";
+    src: url("./IRANYekan/Qs_Iranyekan.ttf");
+  }
+  @font-face {
+    font-family: "IRANYekan";
+    src: url("./IRANYekan/Qs_Iranyekan\ bold.ttf");
+    font-weight: bold;
+  }
+  
+  @font-face {
+    font-family: "Rezvan";
+    src: url("./Rezvan/Rezvan.ttf");
+  }
+
+  
+  @font-face {
+    font-family: "Ubuntu Mono";
+    src: url("./Ubuntu_Mono/UbuntuMono-Regular.ttf");
+  }
+  @font-face {
+    font-family: "Ubuntu Mono";
+    src: url("./Ubuntu_Mono/UbuntuMono-Bold.ttf");
+    font-weight: bold;
+  }
+  
+  html[lang="en"] {
+    --font-primary: "Nunito" , "Tahoma", sans-serif;
+    --font-secondary: "Ubuntu", sans-serif;
+    --font-mono: "Ubuntu Mono", "Courier New", Courier, monospace;
+  }
+
+  html[lang="fa"] {
+    --font-primary : "IRANYekan" , "Ubuntu Mono" , sans-serif;
+    --font-secondary : "Rezvan" ,"Ubuntu Mono" , sans-serif;
+    --font-mono : "Ubuntu Mono" , monospace;
+    --toastify-font-family: "IRANYekan" , sans-serif;
+  }
