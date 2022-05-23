@@ -1,7 +1,7 @@
 {
   "general": {
     "last-update": "13 May 2022",
-    "headingText": "Creative Front\u2011End Developer",
+    "headingText": "Front\u2011End React Developer",
     "scrollCTA": "See my work",
     "motto": "Just a bit better than yesterday",
     "navLinks": [
@@ -47,7 +47,7 @@
           }
         ],
         "image": "./img/online-store.png",
-        "description": "A fully functional responsive ECommerce web application using <code>React.js</code> and <code>Redux Toolkit</code> with the help of <code>React Query</code> and <code>React Router DOM v6</code> styled with <code>Sass</code>\nFeel free to check the repo, I commited all chenges step by step on branch ‘Develop’.",
+        "description": "A responsive online shopping web application developed using the <code>react</code> Library and styled by <code>Sass</code>.<br>This web application downloads and displays the product list from a local <code>JSON</code> file and provides the user with features such as viewing product details, viewing/adding/removing products from the cart, searching, filtering and sorting products.<br>In this project, <code>redux-toolkit</code> is used to manage the states, <code>react-query</code> is used to manage requests, and <code>react-router-dom</code> is used to manage the page location.",
         "bullets": [
           {
             "title": "Features",
@@ -81,7 +81,7 @@
           }
         ],
         "image": "./img/personal-website.png",
-        "description": "A simple, responsive, dynamic-content, fully-localized and animated website which pulls the content from local <code>json</code> files and renders them.<br>Created using <code>React</code> with the help of <code>React Query</code> as the query manager and styled with <code>Sass</code>.",
+        "description": "A simple single page application developed using the <code>react</code> library and styled by <code>Sass</code>, which generally downloads and displays content from local <code>JSON</code> files.<br>In this project, <code>react-intl(Format.js)</code> is used for localization of the user interface. Currently, Persian and English languages ​​are fully supported (texts, errors, links, toasts, etc.).<br>It also uses <code>framer-motion</code> to animate the user interface, <code>react-query</code> to manage requests, <code>react-toastify</code> to display notifications, and <code>formik/yup</code> to manage and validate the contact form.",
         "bullets": [
           {
             "title": "Features",
@@ -121,8 +121,9 @@
       { "title": "Figma", "level": "Mid" },
       { "title": "Responsive Web Design", "level": "Mid" },
       { "title": "Restful API", "level": "Mid" },
+      { "title": "Styled-Components", "level": "Mid" },
+      { "title": "Git/GitHub", "level": "Mid" },
       { "title": "Material UI", "level": "Junior" },
-      { "title": "Git/GitHub", "level": "Junior" },
       { "title": "NodeJs/Express", "level": "Junior" },
       { "title": "Session and JWT Authentication", "level": "Junior" },
       { "title": "MongoDB-mySQL-OracleDB", "level": "Junior", "hidden": true },

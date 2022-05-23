@@ -1,7 +1,7 @@
 {
   "general": {
     "last-update": "13 May 2022",
-    "headingText": "توسعه دهنده فرانت\u2011اند خلاق",
+    "headingText": "توسعه دهنده فرانت\u2011اند ری\u202Fأکت",
     "scrollCTA": "نمونه کار ها",
     "motto": "کمی بهتر از دیروز",
     "outLinks": [
@@ -41,7 +41,7 @@
           }
         ],
         "image": "./img/online-store.png",
-        "description": "یک وب اپلیکیشن ریسپانسیو فروشگاه آنلاین با استفاده از <code>React</code> و <code>Redux Toolkit</code> و استایل دهی شده توسط <code>Sass</code>.",
+        "description": "یک وب اپلیکیشن ریسپانسیو خرید آنلاین که با استفاده از کتابخانه <code>react</code> توسعه داده شده است و توسط <code>Sass</code> استایل دهی شده.<br>این وب اپلیکیشن لیست محصولات را از <code>JSON</code> محلی بارگیری و نمایش میدهد و امکاناتی از جمله مشاهده جزئیات محصول، مشاهده/اضافه/حذف محصولات از سبد خرید، جستوجو، فیتر و مرتب سازی محصولات را در اختیار کاربر قرار میدهد.<br>در این پروژه برای مدیریت استیت ها از <code>redux-toolkit</code>، برای مدیریت درخواست ها از <code>react-query</code> و برای مدیریت مسیر صفحات از <code>react-router-dom</code> استفاده شده است.",
         "bullets": [
           {
             "title": "قابلیت ها",
@@ -75,7 +75,7 @@
           }
         ],
         "image": "./img/personal-website.png",
-        "description": "یک وبسایت ساده ریسپانسیو که توسط <code>React</code> ساخته شده",
+        "description": "یک وبسایت ساده تک صفحه ای که با استفاده از کتابخانه <code>react</code> توسعه داده شده است و توسط <code>Sass</code> استایل دهی و رسپانسیو شده که به طور کلی محتوا را از فایلهای <code>JSON</code> محلی بارگیری و نمایش میدهد.<br>در این پروژه از <code>react-intl(Format.js)</code> برای چند زبانه و محلی سازی کردن رابط کاربری استفاده شده که در حال حاضر زبان های فارسی و انگلیسی به طور کامل (متن ها، ارور ها،‌ لینک ها، توست ها و ...) پشتیبانی میشوند.<br>همچنین برای متحرک کردن رابط کاربری از <code>framer-motion</code>، برای مدیریت درخواست ها از <code>react-query</code>، برای نمایش اعلانات از <code>react-toastify</code> و برای مدیریت و اعتبار سنجی فرم تماس با ما از <code>formik/yup</code> استفاده شده است.",
         "bullets": [
           {
             "title": "قابلیت ها",
@@ -89,8 +89,9 @@
           {
             "title": "با استفاده از",
             "items": [
-              "React(CRA)",
+              "React",
               "React Intl(Format.js)",
+              "Framer Motion",
               "React Query",
               "React Toastify",
               "Formik/Yup",
@@ -113,8 +114,9 @@
       { "title": "Figma", "level": "متوسط" },
       { "title": "Responsive Web Design", "level": "متوسط" },
       { "title": "Restful API", "level": "متوسط" },
+      { "title": "Styled-Components", "level": "متوسط" },
+      { "title": "Git/GitHub", "level": "متوسط" },
       { "title": "Material UI", "level": "تازه کار" },
-      { "title": "Git/GitHub", "level": "تازه کار" },
       { "title": "NodeJs/Express", "level": "تازه کار" },
       { "title": "Session and JWT Authentication", "level": "تازه کار" },
       {
