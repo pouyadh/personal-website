@@ -50,6 +50,16 @@ const Footer = ({ data }) => {
         ))}
       </ul>
 
+      <ul className="lang-links">
+        <li>
+          <a href="/?lang=fa">🇮🇷 فارسی</a>
+        </li>
+        |
+        <li>
+          <a href="/?lang=en">English 🇬🇧</a>
+        </li>
+      </ul>
+
       <ul className="subfooter">
         {data.subFooter.map((item, idx) => (
           <li key={`subFooter-${idx}`}>{item}</li>

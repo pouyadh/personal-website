@@ -26,6 +26,9 @@ footer {
     //gap: 1rem;
     li {
       margin: 0 0.5rem;
+      &::before {
+        display: none;
+      }
     }
 
     a {
@@ -37,6 +40,15 @@ footer {
       a {
         color: var(--color-secondary);
         font-weight: bold;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+    &.lang-links {
+      a {
+        font-weight: bold;
+        font-size: 0.8rem;
         &:hover {
           text-decoration: underline;
         }
