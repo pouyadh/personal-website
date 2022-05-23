@@ -11,27 +11,27 @@
   --color-input-bg: #151238;
   --color-input-placeholder: #555;
   --color-footer-bg: #161616;
-
-  --font-primary: "Nunito", "Tahoma", sans-serif;
-  --font-secondary: "Ubuntu", sans-serif;
-  --font-mono: "Ubuntu Mono", "Courier New", Courier, monospace;
+  --color-error: rgb(230, 157, 157);
+  --color-error-icon: red;
+  --body-max-width: 1600px;
+  --navbar-bg: linear-gradient(180deg, #03002c, 70%, #03002c00);
 }
-
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 html {
   font-family: var(--font-primary);
   font-size: 16px;
   overflow-x: hidden;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
   background-color: var(--color-body-bg);
   color: var(--color-white);
+  max-width: var(--body-max-width);
+  margin: 0 auto;
   overflow-x: hidden;
 }
 
@@ -54,16 +54,41 @@ body {
   }
 }
 
+input,
+textarea,
 button {
-  padding: 0.9em 1em;
-  background-color: var(--color-primary);
-  color: var(--color-white);
+  padding: 0.6em 1em;
+  border-radius: 8px;
   border: none;
   outline: none;
-  border-radius: 8px;
-  cursor: pointer;
+  margin-bottom: 0.7em;
+}
+
+input,
+textarea {
+  background-color: var(--color-input-bg);
+  color: var(--color-white);
   font-family: var(--font-primary);
-  transition: background-color 0.2s ease;
+  &::placeholder {
+    color: var(--color-input-placeholder);
+  }
+}
+
+textarea {
+  height: 8em;
+  resize: vertical;
+  min-height: 4.5em;
+  max-height: 16em;
+  &::-webkit-scrollbar-corner {
+    background-color: transparent;
+  }
+}
+button {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  font-family: var(--font-primary);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
   &:hover {
     background-color: var(--color-primary-light);
   }
@@ -71,19 +96,18 @@ button {
     background-color: var(--color-primary-dark);
   }
   &:disabled {
-    background-color: #333 !important;
+    background-color: #333;
   }
 }
 
 ul {
   list-style: none;
   li::before {
-    content: "\2022"; /* Add content: \2022 is the CSS Code/unicode for a bullet */
-    color: var(--color-secondary); /* Change the color */
-    font-weight: bold; /* If you want it to be bold */
-    display: none; /* Needed to add space between the bullet and the text */
-    width: 1em; /* Also needed for space (tweak if needed) */
-    //margin-left: -1em; /* Also needed for space (tweak if needed) */
+    content: "\2022"; /* \2022 is the CSS Code/unicode for a bullet */
+    color: var(--color-secondary);
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
   }
 }
 
@@ -113,9 +137,13 @@ span.spinner {
 }
 
 code {
+  color: var(--color-secondary);
   background-color: var(--color-black);
+  font-family: var(--font-mono);
+  border: 1px solid #fff1;
   border-radius: 8px;
-  font-size: 0.9em;
+  font-size: 1rem;
+  vertical-align: middle;
   padding: 0.1em 0.4em;
   unicode-bidi: isolate;
 }
@@ -124,8 +152,74 @@ a {
   color: var(--color-secondary);
 }
 
+hr {
+  border-color: var(--color-line);
+}
+
+.error {
+  color: var(--color-error);
+}
+
 html[dir="rtl"] {
   li::after {
     content: "\200E"; // right to left mark
   }
+}
+
+h1,
+h2 {
+  font-family: var(--font-secondary);
+}
+
+h1 {
+  font-size: 2.1rem;
+}
+h2 {
+  font-size: 1.8rem;
+}
+h3 {
+  font-size: 1.6rem;
+}
+h4 {
+  font-size: 1.4rem;
+}
+h5 {
+  font-size: 1.2rem;
+  color: var(--color-grey);
+}
+h6 {
+  font-size: 0.9rem;
+  color: var(--color-grey);
+}
+
+p,
+ul {
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+label {
+  font-size: 1.2rem;
+}
+
+input,
+textarea,
+button {
+  font-size: 1.1rem;
+}
+
+small {
+  font-size: 0.8rem;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--body-max-width);
+  margin: 0 auto;
+}
+
+code {
+  white-space: nowrap;
+}
+p {
+  overflow-wrap: break-word;
 }
