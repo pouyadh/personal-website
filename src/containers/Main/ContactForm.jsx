@@ -33,13 +33,14 @@ const contactFormInitialValues = {
 const CustomErrorMessage = ({ name }) => (
   <ErrorMessage name={name}>
     {(msg) => (
-      <motion.span
+      <motion.small
         className="error"
         animate={{ x: [0, -10, 10, -10, 10, 0] }}
         transition={{ duration: 0.3 }}
       >
-        <FaTimes style={{ color: "#f00" }} /> <FormattedMessage id={msg} />
-      </motion.span>
+        <FaTimes style={{ color: "var(--color-error-icon)" }} />{" "}
+        <FormattedMessage id={msg} />
+      </motion.small>
     )}
   </ErrorMessage>
 );
