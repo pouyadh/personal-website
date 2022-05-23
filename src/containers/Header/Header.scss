@@ -12,6 +12,7 @@ header {
   .bg {
     z-index: 1;
     width: 70vw;
+    max-width: calc(var(--body-max-width) * 0.7);
     height: 100%;
     right: -1%;
     top: -1%;
